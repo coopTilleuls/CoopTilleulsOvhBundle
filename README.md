@@ -2,6 +2,8 @@
 
 This bundle integrates [OVH's offical PHP SDK](https://github.com/ovh/php-ovh) in [the Symfony framework](http://symfony.com).
 
+[![Build Status](https://travis-ci.org/coopTilleuls/CoopTilleulsOvhBundle.svg)](https://travis-ci.org/coopTilleuls/CoopTilleulsOvhBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/7366ca13-3e08-4419-b1f1-ae4c8917275e/mini.png)](https://insight.sensiolabs.com/projects/7366ca13-3e08-4419-b1f1-ae4c8917275e) [![Coverage Status](https://img.shields.io/coveralls/coopTilleuls/CoopTilleulsOvhBundle.svg)](https://coveralls.io/r/coopTilleuls/CoopTilleulsOvhBundle)
+
 ## Installation
 
 Use [Composer](http://getcomposer.org) to install the bundle:
