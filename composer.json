@@ -1,0 +1,29 @@
+{
+    "name": "tilleuls/ovh-bundle",
+    "type": "symfony-bundle",
+    "description": "OVH SDK integration",
+    "keywords": ["ovh", "api", "sdk"],
+    "homepage": "http://les-tilleuls.coop",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kévin Dunglas",
+            "email": "kevin@les-tilleuls.coop",
+            "homepage": "http://dunglas.fr"
+        }
+    ],
+    "require": {
+        "symfony/dependency-injection" : "~2.3",
+        "symfony/config" : "~2.3",
+        "symfony/http-kernel": "~2.3",
+        "ovh/ovh": "~1.1",
+        "henrikbjorn/phpspec-code-coverage": "~1.0"
+    },
+    "autoload": {
+        "psr-4": { "CoopTilleuls\\OvhBundle\\": "" }
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1",
+        "satooshi/php-coveralls": "~0.6"
+    }
+}
