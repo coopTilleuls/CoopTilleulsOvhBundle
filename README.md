@@ -65,7 +65,7 @@ Example usage in a controller:
                 sprintf('/sms/%s/users/%s/jobs', 'my-service-name', 'my-login'),
                 [
                     'message' => 'Si tu veux me parler, envoie-moi un... fax !',
-                    'receivers' => '+33612345678',
+                    'receivers' => ['+33612345678'],
                     'sender' => 'my-login',
                 ]
             )
