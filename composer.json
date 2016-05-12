@@ -13,10 +13,11 @@
         }
     ],
     "require": {
-        "symfony/dependency-injection" : "~2.3",
-        "symfony/config" : "~2.3",
-        "symfony/http-kernel": "~2.3",
-        "ovh/ovh": "~1.1"
+        "php": ">=5.5",
+        "symfony/dependency-injection" : "~2.3|~3.0",
+        "symfony/config" : "~2.3|~3.0",
+        "symfony/http-kernel": "~2.3|~3.0",
+        "ovh/ovh": "~2.0"
     },
     "autoload": {
         "psr-4": { "CoopTilleuls\\OvhBundle\\": "" }
