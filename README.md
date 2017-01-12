@@ -62,7 +62,7 @@ Example usage in a controller:
         $this
             ->get('ovh')
             ->post(
-                sprintf('/sms/%s/users/%s/jobs', 'my-service-name', 'my-login'),
+                sprintf('/sms/%s/users/%s/jobs/', 'my-service-name', 'my-login'),
                 [
                     'message' => 'Si tu veux me parler, envoie-moi un... fax !',
                     'receivers' => ['+33612345678'],
