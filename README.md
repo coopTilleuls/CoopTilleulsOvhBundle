@@ -46,6 +46,15 @@ parameters:
     ovh_consumer_key:       "MyOvhConsumerKey"
 ```
 
+You can also configure extra parameters for guzzle connection and transaction timeouts :
+
+```yaml
+    connect_timeout:    "%ovh_connect_timeout%"
+    timeout:    		"%ovh_timeout%"
+```
+
+Default values for these parameters are 5 and 30 seconds. 
+
 ## Usage
 
 The bundle automatically registers a `ovh` service in the Dependency Injection Container. That service is
