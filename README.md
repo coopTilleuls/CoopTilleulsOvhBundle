@@ -46,14 +46,12 @@ parameters:
     ovh_consumer_key:       "MyOvhConsumerKey"
 ```
 
-You can also configure extra parameters for guzzle connection and transaction timeouts :
+You can also define you own guzzle client service :
 
 ```yaml
-    connect_timeout:    "%ovh_connect_timeout%"
-    timeout:    		"%ovh_timeout%"
+    guzzle_client:           "%guzzle_client_service_name%"
 ```
 
-Default values for these parameters are 5 and 30 seconds. 
 
 ## Usage
 

@@ -35,8 +35,9 @@ class CoopTilleulsOvhExtension extends Extension
         $container->setParameter('coop_tilleuls_ovh.application_secret', $config['application_secret']);
         $container->setParameter('coop_tilleuls_ovh.endpoint_name', $config['endpoint_name']);
         $container->setParameter('coop_tilleuls_ovh.consumer_key', $config['consumer_key']);
-        $container->setParameter('coop_tilleuls_ovh.timeout', $config['timeout']);
-        $container->setParameter('coop_tilleuls_ovh.connect_timeout', $config['connect_timeout']);
+        if ($container->has('coop_tilleuls_ovh.guzzle_client')){
+            $container->setParameter('coop_tilleuls_ovh.guzzle_client', $config['guzzle_client']);
+        }
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
