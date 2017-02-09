@@ -46,13 +46,6 @@ parameters:
     ovh_consumer_key:       "MyOvhConsumerKey"
 ```
 
-You can also define you own guzzle client service :
-
-```yaml
-    guzzle_client:           "%guzzle_client_service_name%"
-```
-
-
 ## Usage
 
 The bundle automatically registers a `ovh` service in the Dependency Injection Container. That service is

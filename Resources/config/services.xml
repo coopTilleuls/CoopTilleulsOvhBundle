@@ -5,16 +5,13 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        
-        <service id="coop_tilleuls_ovh.default_guzzle_client" class="GuzzleHttp\Client">
-        </service>   
              
         <service id="coop_tilleuls_ovh.api" class="Ovh\Api">
             <argument>%coop_tilleuls_ovh.application_key%</argument>
             <argument>%coop_tilleuls_ovh.application_secret%</argument>
             <argument>%coop_tilleuls_ovh.endpoint_name%</argument>
             <argument>%coop_tilleuls_ovh.consumer_key%</argument>
-            <argument type="expression">service(container.hasParameter('coop_tilleuls_ovh.guzzle_client') ? parameter('coop_tilleuls_ovh.guzzle_client') : 'coop_tilleuls_ovh.default_guzzle_client')</argument>
+            <argument type="service" id="coop_tilleuls_ovh.guzzle_client_service" on-invalid="null" />
         </service>
 
         <service id="ovh" alias="coop_tilleuls_ovh.api" />
