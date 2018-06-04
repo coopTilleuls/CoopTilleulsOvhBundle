@@ -13,6 +13,7 @@
         </service>
 
         <service id="ovh" alias="coop_tilleuls_ovh.api" public="true" />
+        <service id="Ovh\Api" alias="coop_tilleuls_ovh.api" />
     </services>
 
 </container>
