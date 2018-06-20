@@ -36,12 +36,12 @@ class CoopTilleulsOvhExtensionSpec extends ObjectBehavior
 
     function it_loads(ContainerBuilder $container)
     {
+        $container->fileExists(Argument::type('string'))->shouldBeCalled();
         $container->setParameter('coop_tilleuls_ovh.application_key', self::APPLICATION_KEY)->shouldBeCalled();
         $container->setParameter('coop_tilleuls_ovh.application_secret', self::APPLICATION_SECRET)->shouldBeCalled();
         $container->setParameter('coop_tilleuls_ovh.endpoint_name', self::ENDPOINT_NAME)->shouldBeCalled();
         $container->setParameter('coop_tilleuls_ovh.consumer_key', self::CONSUMER_KEY)->shouldBeCalled();
         $container->hasExtension('http://symfony.com/schema/dic/services')->shouldBeCalled();
-        $container->addResource(Argument::type('Symfony\Component\Config\Resource\FileResource'))->shouldBeCalled();
         $container->setDefinition('coop_tilleuls_ovh.api', Argument::type('Symfony\Component\DependencyInjection\Definition'))->shouldBeCalled();
         $container->setAlias('ovh', Argument::type('Symfony\Component\DependencyInjection\Alias'))->shouldBeCalled();
 
