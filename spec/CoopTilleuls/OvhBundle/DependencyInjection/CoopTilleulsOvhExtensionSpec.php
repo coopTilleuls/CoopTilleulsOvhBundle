@@ -44,6 +44,7 @@ class CoopTilleulsOvhExtensionSpec extends ObjectBehavior
         $container->hasExtension('http://symfony.com/schema/dic/services')->shouldBeCalled();
         $container->setDefinition('coop_tilleuls_ovh.api', Argument::type('Symfony\Component\DependencyInjection\Definition'))->shouldBeCalled();
         $container->setAlias('ovh', Argument::type('Symfony\Component\DependencyInjection\Alias'))->shouldBeCalled();
+        $container->setAlias('Ovh\Api', Argument::type('Symfony\Component\DependencyInjection\Alias'))->shouldBeCalled();
 
         $configs = array(
             array(
