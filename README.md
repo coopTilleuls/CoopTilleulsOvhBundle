@@ -59,7 +59,7 @@ Example usage in a controller:
     public function smsAction(\Ovh\Api $ovhApi)
     {
         // Send a SMS
-        $tovhApi
+        $ovhApi
             ->post(
                 sprintf('/sms/%s/users/%s/jobs', 'my-service-name', 'my-login'),
                 [
