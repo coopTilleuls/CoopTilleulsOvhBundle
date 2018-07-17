@@ -56,11 +56,10 @@ Example usage in a controller:
 ```php
 // ...
 
-    public function smsAction()
+    public function smsAction(\Ovh\Api $ovhApi)
     {
         // Send a SMS
-        $this
-            ->get('ovh')
+        $tovhApi
             ->post(
                 sprintf('/sms/%s/users/%s/jobs', 'my-service-name', 'my-login'),
                 [
