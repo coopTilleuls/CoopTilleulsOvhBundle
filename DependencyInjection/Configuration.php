@@ -34,6 +34,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('application_secret')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('endpoint_name')->defaultValue('ovh-eu')->cannotBeEmpty()->end()
                 ->scalarNode('consumer_key')->isRequired()->cannotBeEmpty()->end()
+                ->scalarNode('guzzle_client')->end()
             ->end()
         ;
 
