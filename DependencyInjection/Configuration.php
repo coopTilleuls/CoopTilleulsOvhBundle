@@ -26,8 +26,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('coop_tilleuls_ovh');
+        $treeBuilder = new TreeBuilder('coop_tilleuls_ovh');
+        $rootNode = $treeBuilder->getRootNode();
         $rootNode
             ->children()
                 ->scalarNode('application_key')->isRequired()->cannotBeEmpty()->end()
